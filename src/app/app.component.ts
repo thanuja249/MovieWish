@@ -9,12 +9,13 @@ import { Component, OnInit } from '@angular/core';
 
 export class AppComponent implements OnInit{
   title = 'MovieWish';
-  movieWishList:MovieListModel[]=[{movieListName:'helloo',movies:["movie1","movie 2","movie 3"]},
-  {movieListName:'helloo1',movies:["movie1","movie 24","movie 3"]},
-  {movieListName:'helloo2',movies:["movie1","movie 21","movie 3"]},
-  {movieListName:'helloo3',movies:["movie1","movie 22","movie 3"]},
-  {movieListName:'helloo4',movies:["movie1","movie 23","movie 3"]},
-  {movieListName:'helloo5',movies:["movie1","movie 25","movie 3"]},]
+    movieWishList: MovieListModel[] = [
+  {movieListName:'MCU MOVIES',movies:["IRON MAN","SUPER MAN AMERICA","DARK KNIGHT"]},
+  { movieListName: 'DC MOVIES', movies: ["WONDER WOMEN","SUPER MAN","BAT MAN"]},
+  {movieListName:'THRILLER MOVIES',movies:["UNDER WATER","A QUIET PLACE","THE INVISIBLE MAN"]},
+  {movieListName:'COMEDY MOVIES',movies:["INTERN","PARASITE","LITTLE"]},
+  { movieListName: 'ACTION  MOVIES', movies: ["MASTER MINDS", "GAME NIGHT", "SPENSER"] },
+  { movieListName: 'ANIMATION MOVIES', movies: ["TOM AND JERRY", "FROZEN", "SCOOBY DO"] }    ]
   permmovieWishList:MovieListModel[]=this.movieWishList
   editMovieListName:string=""
   showSelectedMovieList:string[]=[];
@@ -43,7 +44,11 @@ showMovies(i){
   }
 }
 addMovieList(){
-  this.addMovieListpopup='block'
+    this.addMovieListpopup = 'block';
+    this.editMovieName = ""
+    this.editMovieListName = ""
+    this.showSelectedMovieList = [];
+    this.editFlag = false;
 }
 search(movielistname){
   this.searchMovieList=movielistname
