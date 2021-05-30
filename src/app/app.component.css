@@ -1,3 +1,17 @@
+h1 {
+    width: 300px;
+    padding-right: 1px;
+    background-color: antiquewhite;
+    color: burlywood;
+    font-family: Georgia, sans-serif;
+    font-size: 2.5em;
+    letter-spacing: -2px;
+    text-align: center;
+    margin:0;
+    margin-left:500px;
+}
+
+
 .grid{
     display: grid;
     grid-template-rows: 60px 60px 60px 700px;
@@ -66,7 +80,7 @@ li{
  font-size: x-large; 
  border: 1px solid red;
  padding: auto;
- 
+ cursor: pointer;
 }
 .movieList{
     padding: 3px;
@@ -92,12 +106,20 @@ li{
     grid-column-start: 2 ;
     grid-column-end: 3;
 }
+.sublist1{
+    color: gold;
+    font-display:auto;  
+    font-display:swap;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
 .edit{
     grid-column-start: 3 ;
     grid-column-end: 4;
     background-color: black;
     color: white;
     text-align: center;
+    cursor:pointer;
 }
 .delete{
     grid-column-start: 4 ;
@@ -105,6 +127,7 @@ li{
     text-align: center;
     background-color: red;
     color: white;
+    cursor:pointer;
 }
 
 
