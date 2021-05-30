@@ -1,15 +1,17 @@
+<h1>MOVIE WISH</h1>
 <div class="modal" [ngStyle]="{'display':addMovieListpopup}">
   <div class="modal-content">
     <span class="close" (click)="clear()">&times;</span>
     <input class="input" type="text" [value]="editMovieListName" #movieListn placeholder="Movie List Name"><br>
     <input class="input" type="text" [(ngModel)]="editMovieName"  #movien placeholder="Movie">
-    <button class="searchbtn" (click)="add(movien.value)">+ Add Movie</button><br>
+    <button class="searchbtn" (click)="add(movien.value)">+ Add Movie</button><br><br />
+      <br />
     <li class="movie list" *ngFor="let movieeList of newMovieListMovies;let j=index" >
       <div class='sublist'  >{{movieeList}}</div>      
       <div class="delete" (click)="deleteMovie(j)">X</div>
-    </li>
+    </li><br />
     <button *ngIf="!editFlag" class="searchbtn" (click)="addNewMovieList(movieListn.value)">Add Movie List</button>
-    <button *ngIf="editFlag" class="searchbtn" (click)="addNewMovieList(movieListn.value)">edit Movie List</button>
+    <button *ngIf="editFlag" class="searchbtn" (click)="addNewMovieList(movieListn.value)">Save Movie List</button>
     </div>
 </div>
 
@@ -25,14 +27,14 @@
     <div class="movieList" *ngFor="let movieList of movieWishList ; let i=index" >
       <li class="list">
         <div class="show"(click)="showMovies(i)">></div>
-        <div class='sublist'>{{movieList.movieListName}}</div>             
+        <div class="sublist">{{movieList.movieListName}}</div>             
         <div class="edit" (click)="editMovieList(i)">Edit</div>
         <div class="delete" (click)="deleteMovieList(i)">Delete</div>
       </li>
       
       <div *ngIf="movieWishList[i].movieListName==selectedMovieList" >        
       <li class="movie list" *ngFor="let movieeList of showSelectedMovieList;let j=index" >
-        <div class='sublist'  >{{movieeList}}</div>
+        <div class='sublist1'  >{{movieeList}}</div>
         <hr>
       </li>
     </div>
